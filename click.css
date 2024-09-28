@@ -1,0 +1,203 @@
+/* Score Icon Styling */
+.score {
+    display: flex;
+    align-items: center; /* Center icon and score text vertically */
+    font-size: 32px;
+    margin: 10px 0px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.score-icon {
+    width: 50px;  /* Adjust the size of the icon */
+    height: 50px;
+    margin-right: 1px; /* Space between icon and score */
+}
+
+/* General Styling for Layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.level {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.apple-container {
+    position: relative;
+    width: 20px; /* Increased size */
+    height: 20px; /* Increased size */
+    margin: 2px 0;
+}
+
+.silver-background, .black-background, .gray-circle, .apple-image {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.silver-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: silver;
+    opacity: 0.5;
+}
+
+.black-background {
+    top: 10px;
+    left: 10px;
+    width: 330px;
+    height: 330px;
+    background-color: black;
+}
+
+.gray-circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    background-color: gray;
+}
+
+.apple-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+.clicks, .boost {
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 48%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    flex-wrap: wrap;
+}
+
+button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .apple-container {
+        width: 250px;  
+        height: 250px; 
+    }
+
+    .black-background {
+        width: 230px; 
+        height: 230px;
+    }
+
+    .gray-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .apple-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clicks, .boost {
+        width: 100%; 
+        margin-bottom: 10px;
+        font-size: 16px;
+        padding: 10px; 
+    }
+}
+/* Style for the Boost button */
+.boost-button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boost-button:hover {
+    background-color: #e64a19;
+}
+
+.boost-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
