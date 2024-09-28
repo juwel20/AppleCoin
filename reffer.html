@@ -14,7 +14,7 @@
         <div class="referral-link">
             <strong>Your Referral Link is:</strong><br>
             <div class="link-container">
-                <span class="link">http://xmjhaxx.com/?ref=<span id="referral-code"></span></span>
+                <span class="link" id="referral-link"></span> <!-- Updated ID here -->
                 <button class="copy-button" onclick="copyLink()">Copy</button>
             </div>
         </div>
@@ -36,66 +36,33 @@
     </div>
 
     <script>
-        // Function to get referral code from URL
+        // Example user ID for this session (you can generate this or retrieve from a server)
+        let currentUserID = 'user123'; // This would ideally come from a backend or login session
+    
+        // Function to get referral code (based on user ID)
         function getReferralCode() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('ref'); // Get the referral code from the URL
+            return currentUserID;
         }
-
+    
         // Display the referral link with the user's unique code
-        document.getElementById('referral-code').textContent = getReferralCode();
-
+        function updateReferralLink() {
+            const baseLink = window.location.origin; // Gets the current site's URL (e.g., https://juwel20.github.io)
+            const referralLink = `${baseLink}/?ref=${getReferralCode()}`; // Updated link
+            document.getElementById('referral-link').textContent = referralLink; // Update displayed link
+        }
+    
         // Function to copy the referral link to clipboard
         function copyLink() {
-            const linkText = `http://xmjhaxx.com/?ref=${getReferralCode()}`;
+            const linkText = `${window.location.origin}/?ref=${getReferralCode()}`; // Updated link
             navigator.clipboard.writeText(linkText).then(() => {
                 alert('Referral link copied to clipboard!');
             }).catch(err => {
                 console.error('Error copying text: ', err);
             });
         }
-
-        // Retrieve stored friends from localStorage
-        function getFriends() {
-            let friends = JSON.parse(localStorage.getItem('friends')) || [];
-            return friends;
-        }
-
-        // Add a new friend to the user's friend list
-        function addFriend(friendName) {
-            let friends = getFriends();
-            friends.push(friendName);
-            localStorage.setItem('friends', JSON.stringify(friends));
-        }
-
-        // Populate the friends list dynamically
-        function displayFriends() {
-            const friendsList = document.getElementById('friends-list');
-            let friends = getFriends();
-            friendsList.innerHTML = ''; // Clear existing list
-            
-            friends.forEach((friend, index) => {
-                const li = document.createElement('li');
-                li.textContent = `${index + 1}. ${friend}`;
-                friendsList.appendChild(li);
-            });
-        }
-
-        // Simulate adding a friend (for demo purposes)
-        function simulateFriendSignup(friendName) {
-            addFriend(friendName);
-            displayFriends(); // Update the UI with the new friend
-        }
-
-        // Check for referral code when page loads
-        const referralCode = getReferralCode();
-        if (referralCode) {
-            // Simulate the friend signup using the referral code (username)
-            simulateFriendSignup(referralCode);
-        }
-
+    
         // Initialize the page
-        displayFriends();
+        updateReferralLink(); // Call this to update the link when the page loads
     </script>
 </body>
 </html>
