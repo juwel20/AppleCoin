@@ -36,12 +36,10 @@
     </div>
 
     <script>
-        // Example user ID for this session (you can generate this or retrieve from a server)
-        let currentUserID = 'user123'; // This would ideally come from a backend or login session
-
-        // Function to get referral code (based on user ID)
+        // Function to get referral code from URL
         function getReferralCode() {
-            return currentUserID;
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('ref'); // Get the referral code from the URL
         }
 
         // Display the referral link with the user's unique code
@@ -84,19 +82,20 @@
         }
 
         // Simulate adding a friend (for demo purposes)
-        // In real-world usage, this would happen when someone signs up using the referral link
         function simulateFriendSignup(friendName) {
             addFriend(friendName);
             displayFriends(); // Update the UI with the new friend
         }
 
+        // Check for referral code when page loads
+        const referralCode = getReferralCode();
+        if (referralCode) {
+            // Simulate the friend signup using the referral code (username)
+            simulateFriendSignup(referralCode);
+        }
+
         // Initialize the page
         displayFriends();
-
-        // For demo, simulate a new friend sign-up
-        // In a real app, this would be triggered when someone uses the referral link
-        // Uncomment below line to simulate adding a new friend
-        // simulateFriendSignup('NewFriend');
     </script>
 </body>
 </html>
