@@ -66,3 +66,343 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer</title>
+    <link rel="stylesheet" href="reffer.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="level">LEVEL 01</div>
+        
+        <!-- Referral Link Section -->
+        <div class="referral-link">
+            <strong>Your Referral Link is:</strong><br>
+            <div class="link-container">
+                <span class="link" id="referral-link"></span> <!-- Updated ID here -->
+                <button class="copy-button" onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+
+        <!-- Friends Section -->
+        <div class="friends">
+            <strong>Your Friends:</strong>
+            <ul id="friends-list">
+                <!-- Friends will be dynamically populated here -->
+            </ul>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <a href="index.html"><button>Tap</button></a>
+            <a href="task.html"><button>Task</button></a>
+            <a href="withdraw.html"><button>Withdraw</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Example user ID for this session (you can generate this or retrieve from a server)
+        let currentUserID = 'user123'; // This would ideally come from a backend or login session
+    
+        // Function to get referral code (based on user ID)
+        function getReferralCode() {
+            return currentUserID;
+        }
+    
+        // Display the referral link with the user's unique code
+        function updateReferralLink() {
+            const baseLink = window.location.origin; // Gets the current site's URL (e.g., https://juwel20.github.io)
+            const referralLink = `${baseLink}/?ref=${getReferralCode()}`; // Updated link
+            document.getElementById('referral-link').textContent = referralLink; // Update displayed link
+        }
+    
+        // Function to copy the referral link to clipboard
+        function copyLink() {
+            const linkText = `${window.location.origin}/?ref=${getReferralCode()}`; // Updated link
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert('Referral link copied to clipboard!');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+    
+        // Initialize the page
+        updateReferralLink(); // Call this to update the link when the page loads
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer</title>
+    <link rel="stylesheet" href="reffer.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="level">LEVEL 01</div>
+        
+        <!-- Referral Link Section -->
+        <div class="referral-link">
+            <strong>Your Referral Link is:</strong><br>
+            <div class="link-container">
+                <span class="link" id="referral-link"></span> <!-- Updated ID here -->
+                <button class="copy-button" onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+
+        <!-- Friends Section -->
+        <div class="friends">
+            <strong>Your Friends:</strong>
+            <ul id="friends-list">
+                <!-- Friends will be dynamically populated here -->
+            </ul>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <a href="index.html"><button>Tap</button></a>
+            <a href="task.html"><button>Task</button></a>
+            <a href="withdraw.html"><button>Withdraw</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Example user ID for this session (you can generate this or retrieve from a server)
+        let currentUserID = 'user123'; // This would ideally come from a backend or login session
+    
+        // Function to get referral code (based on user ID)
+        function getReferralCode() {
+            return currentUserID;
+        }
+    
+        // Display the referral link with the user's unique code
+        function updateReferralLink() {
+            const baseLink = window.location.origin; // Gets the current site's URL (e.g., https://juwel20.github.io)
+            const referralLink = `${baseLink}/?ref=${getReferralCode()}`; // Updated link
+            document.getElementById('referral-link').textContent = referralLink; // Update displayed link
+        }
+    
+        // Function to copy the referral link to clipboard
+        function copyLink() {
+            const linkText = `${window.location.origin}/?ref=${getReferralCode()}`; // Updated link
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert('Referral link copied to clipboard!');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+    
+        // Initialize the page
+        updateReferralLink(); // Call this to update the link when the page loads
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer</title>
+    <link rel="stylesheet" href="reffer.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="level">LEVEL 01</div>
+        
+        <!-- Referral Link Section -->
+        <div class="referral-link">
+            <strong>Your Referral Link is:</strong><br>
+            <div class="link-container">
+                <span class="link" id="referral-link"></span> <!-- Updated ID here -->
+                <button class="copy-button" onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+
+        <!-- Friends Section -->
+        <div class="friends">
+            <strong>Your Friends:</strong>
+            <ul id="friends-list">
+                <!-- Friends will be dynamically populated here -->
+            </ul>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <a href="index.html"><button>Tap</button></a>
+            <a href="task.html"><button>Task</button></a>
+            <a href="withdraw.html"><button>Withdraw</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Example user ID for this session (you can generate this or retrieve from a server)
+        let currentUserID = 'user123'; // This would ideally come from a backend or login session
+    
+        // Function to get referral code (based on user ID)
+        function getReferralCode() {
+            return currentUserID;
+        }
+    
+        // Display the referral link with the user's unique code
+        function updateReferralLink() {
+            const baseLink = window.location.origin; // Gets the current site's URL (e.g., https://juwel20.github.io)
+            const referralLink = `${baseLink}/?ref=${getReferralCode()}`; // Updated link
+            document.getElementById('referral-link').textContent = referralLink; // Update displayed link
+        }
+    
+        // Function to copy the referral link to clipboard
+        function copyLink() {
+            const linkText = `${window.location.origin}/?ref=${getReferralCode()}`; // Updated link
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert('Referral link copied to clipboard!');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+    
+        // Initialize the page
+        updateReferralLink(); // Call this to update the link when the page loads
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer</title>
+    <link rel="stylesheet" href="reffer.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="level">LEVEL 01</div>
+        
+        <!-- Referral Link Section -->
+        <div class="referral-link">
+            <strong>Your Referral Link is:</strong><br>
+            <div class="link-container">
+                <span class="link" id="referral-link"></span> <!-- Updated ID here -->
+                <button class="copy-button" onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+
+        <!-- Friends Section -->
+        <div class="friends">
+            <strong>Your Friends:</strong>
+            <ul id="friends-list">
+                <!-- Friends will be dynamically populated here -->
+            </ul>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <a href="index.html"><button>Tap</button></a>
+            <a href="task.html"><button>Task</button></a>
+            <a href="withdraw.html"><button>Withdraw</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Example user ID for this session (you can generate this or retrieve from a server)
+        let currentUserID = 'user123'; // This would ideally come from a backend or login session
+    
+        // Function to get referral code (based on user ID)
+        function getReferralCode() {
+            return currentUserID;
+        }
+    
+        // Display the referral link with the user's unique code
+        function updateReferralLink() {
+            const baseLink = window.location.origin; // Gets the current site's URL (e.g., https://juwel20.github.io)
+            const referralLink = `${baseLink}/?ref=${getReferralCode()}`; // Updated link
+            document.getElementById('referral-link').textContent = referralLink; // Update displayed link
+        }
+    
+        // Function to copy the referral link to clipboard
+        function copyLink() {
+            const linkText = `${window.location.origin}/?ref=${getReferralCode()}`; // Updated link
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert('Referral link copied to clipboard!');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+    
+        // Initialize the page
+        updateReferralLink(); // Call this to update the link when the page loads
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer</title>
+    <link rel="stylesheet" href="reffer.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="level">LEVEL 01</div>
+        
+        <!-- Referral Link Section -->
+        <div class="referral-link">
+            <strong>Your Referral Link is:</strong><br>
+            <div class="link-container">
+                <span class="link" id="referral-link"></span> <!-- Updated ID here -->
+                <button class="copy-button" onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+
+        <!-- Friends Section -->
+        <div class="friends">
+            <strong>Your Friends:</strong>
+            <ul id="friends-list">
+                <!-- Friends will be dynamically populated here -->
+            </ul>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <a href="index.html"><button>Tap</button></a>
+            <a href="task.html"><button>Task</button></a>
+            <a href="withdraw.html"><button>Withdraw</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Example user ID for this session (you can generate this or retrieve from a server)
+        let currentUserID = 'user123'; // This would ideally come from a backend or login session
+    
+        // Function to get referral code (based on user ID)
+        function getReferralCode() {
+            return currentUserID;
+        }
+    
+        // Display the referral link with the user's unique code
+        function updateReferralLink() {
+            const baseLink = window.location.origin; // Gets the current site's URL (e.g., https://juwel20.github.io)
+            const referralLink = `${baseLink}/?ref=${getReferralCode()}`; // Updated link
+            document.getElementById('referral-link').textContent = referralLink; // Update displayed link
+        }
+    
+        // Function to copy the referral link to clipboard
+        function copyLink() {
+            const linkText = `${window.location.origin}/?ref=${getReferralCode()}`; // Updated link
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert('Referral link copied to clipboard!');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+    
+        // Initialize the page
+        updateReferralLink(); // Call this to update the link when the page loads
+    </script>
+</body>
+</html>
